@@ -2,7 +2,6 @@ package com.vanniktech.maven.publish
 
 import com.vanniktech.maven.publish.tasks.AndroidJavadocs
 import com.vanniktech.maven.publish.tasks.AndroidJavadocsJar
-import com.vanniktech.maven.publish.tasks.AndroidSourcesJar
 import com.vanniktech.maven.publish.tasks.EmptySourcesJar
 import com.vanniktech.maven.publish.tasks.GroovydocsJar
 import com.vanniktech.maven.publish.tasks.JavadocsJar
@@ -111,8 +110,9 @@ internal class MavenPublishConfigurer(
 
     publication.from(project.components.getByName(project.publishExtension.androidVariantToPublish))
 
-    val androidSourcesJar = project.tasks.register("androidSourcesJar", AndroidSourcesJar::class.java)
-    publication.artifact(androidSourcesJar)
+// We don't want to include source files
+//    val androidSourcesJar = project.tasks.register("androidSourcesJar", AndroidSourcesJar::class.java)
+//    publication.artifact(androidSourcesJar)
 
     project.tasks.register("androidJavadocs", AndroidJavadocs::class.java)
     val androidJavadocsJar = project.tasks.register("androidJavadocsJar", AndroidJavadocsJar::class.java)

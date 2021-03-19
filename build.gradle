@@ -32,7 +32,7 @@ apply plugin: 'com.vanniktech.code.quality.tools'
 apply plugin: 'com.vanniktech.android.junit.jacoco'
 apply plugin: "com.vanniktech.maven.publish"
 apply plugin: 'com.gradle.plugin-publish'
-apply from: "gradle/integration-test.gradle"
+//apply from: "gradle/integration-test.gradle"
 
 codeQualityTools {
   ktlint {
@@ -94,9 +94,9 @@ dependencies {
   testImplementation "org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion"
   testImplementation "org.jetbrains.dokka:dokka-android-gradle-plugin:$dokkaVersion"
 
-  integrationTestImplementation gradleTestKit()
-  integrationTestImplementation "junit:junit:$junitVersion"
-  integrationTestImplementation "org.assertj:assertj-core:$assertjVersion"
+//  integrationTestImplementation gradleTestKit()
+//  integrationTestImplementation "junit:junit:$junitVersion"
+//  integrationTestImplementation "org.assertj:assertj-core:$assertjVersion"
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_7

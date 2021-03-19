@@ -287,12 +287,12 @@ class MavenPublishPluginIntegrationTest(
     val pomFile = "$artifactId-$version.pom"
     val moduleFile = "$artifactId-$version.module"
     val javadocJar = "$artifactId-$version-javadoc.jar"
-    val sourcesJar = "$artifactId-$version-sources.jar"
+//    val sourcesJar = "$artifactId-$version-sources.jar"
     assertArtifactGenerated(artifactJar, artifactId, groupId, version)
     assertArtifactGenerated(pomFile, artifactId, groupId, version)
     assertArtifactGenerated(moduleFile, artifactId, groupId, version)
     assertArtifactGenerated(javadocJar, artifactId, groupId, version)
-    assertArtifactGenerated(sourcesJar, artifactId, groupId, version)
+//    assertArtifactGenerated(sourcesJar, artifactId, groupId, version)
   }
 
   private fun assertArtifactGenerated(
